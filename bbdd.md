@@ -77,6 +77,34 @@
      A la hora de identificar si alguna columna tiene null, tenemos que usar operadores especiales:
      select * from Customers where Country is null
 
+   - ¿CÓMO FUNCIONA LOAD DATA INFILE EN MYSQL SHELL?:
+
+     A ver, load data infile sigue la siguiente estructura:
+     
+     LOAD DATA INFILE 'ruta/al/archivo.csv'
+     INTO TABLE nombre_de_la_tabla
+     FIELDS TERMINATED BY ','
+     LINES TERMINATED BY '\n'
+     IGNORE 1 LINES;
+
+     Expliquemos bien que hace cada cosa.
+
+     -> LOAD DATA INFILE 'ruta/al/archivo.csv': Proporcionar la ruta donde se encuentra el archivo csv
+     -> INTO TABLE nombre_de_la_tabla: Asignar la tabla donde deseas introducir los datos
+     -> FIELDS TERMINATED BY ',': Especifica el delimitador que se usa en el csv. Lo habitual es encontrar ',' pero también se usa ';'
+     -> LINES TERMINATED BY '\n': Indica que por cada linea escrita hay un salto de linea (se usa el caracter de salto de linea \n generalmente)
+     -> IGNORE 1 LINES: Si deseas ignorar una linea de tu csv porque esta la sección de columnas puedes hacerlo
+
+   - ERRORES COMUNES:
+
+       Qué salte este error: The MySQL server is running with the --secure-file-priv option so it cannot execute this statement
+
+     - SOLUCIÓN: Acceder a las variables de configuración de mySQL => show variables like 'secure_file_priv' => si te sale 'empty set' =>
+       => grant file on *.* to 'root'@'localhost' (no hace falta poner 3306 ya que es el puerto predeterminado) => ya te sale => metes
+       el archivo csv a la ubicación => pruebas load data;
+
+     - O con show variables like 'local_infile' lo pones ON y pruebas (recuerda reiniciar el servidor de mySQL en el panel de control);
+
    
    
 
