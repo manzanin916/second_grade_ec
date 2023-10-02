@@ -27,7 +27,7 @@
    ---> ¿Se usan las comillas simples o las dobles?: Es recomendable usar las simples ('') siempre que vayas a crear una cadena de caracteres, ya que son compatibles con todas las bases de datos,
         en cambio las comillas dobles no son siempre compatibles. Es recomendable usar las dobles cuando quieras tener algo así ==> SELECT "It's a string" FROM tabla;
 
-<-------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+<------------------------------------------------------------------------------------------------------------->
 
    - CONSULTA SELECT: 
    
@@ -76,6 +76,8 @@
 
      A la hora de identificar si alguna columna tiene null, tenemos que usar operadores especiales:
      select * from Customers where Country is null
+
+<------------------------------------------------------------------------------------------------------------->
 
    - ¿CÓMO FUNCIONA LOAD DATA INFILE EN MYSQL SHELL?:
 
