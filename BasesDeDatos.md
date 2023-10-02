@@ -91,11 +91,11 @@
 
      Expliquemos bien que hace cada cosa.
 
-     -> LOAD DATA INFILE 'ruta/al/archivo.csv': Proporcionar la ruta donde se encuentra el archivo csv
-     -> INTO TABLE nombre_de_la_tabla: Asignar la tabla donde deseas introducir los datos
-     -> FIELDS TERMINATED BY ',': Especifica el delimitador que se usa en el csv. Lo habitual es encontrar ',' pero también se usa ';'
-     -> LINES TERMINATED BY '\n': Indica que por cada linea escrita hay un salto de linea (se usa el caracter de salto de linea \n generalmente)
-     -> IGNORE 1 LINES: Si deseas ignorar una linea de tu csv porque esta la sección de columnas puedes hacerlo
+     - LOAD DATA INFILE 'ruta/al/archivo.csv': Proporcionar la ruta donde se encuentra el archivo csv
+     - INTO TABLE nombre_de_la_tabla: Asignar la tabla donde deseas introducir los datos
+     - FIELDS TERMINATED BY ',': Especifica el delimitador que se usa en el csv. Lo habitual es encontrar ',' pero también se usa ';'
+     - LINES TERMINATED BY '\n': Indica que por cada linea escrita hay un salto de linea (se usa el caracter de salto de linea \n generalmente)
+     - IGNORE 1 LINES: Si deseas ignorar una linea de tu csv porque esta la sección de columnas puedes hacerlo
 
    - ERRORES COMUNES:
 
